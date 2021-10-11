@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="col-md-6 m-auto p-2">
+    <button type="button" class="btn btn-primary btn-lg" routerLink='adduser' routerLink="/">Volver atrás</button>
+</div>
+    <div class="row">
+        <div class="col-md-6 m-auto p-3">
+            <form #myForm="ngForm" (ngSubmit)="crearUser()">
+                <div class="form-group">
+                  <label for="formGroupExampleInput">Nombre</label>
+                  <input type="text" class="form-control" id="formGroupExampleInput" [(ngModel)]="userModel.nombre" name="nombre">
+                </div>
+                <div class="form-group">
+                  <label for="formGroupExampleInput2">Descripcion</label>
+                  <input type="text" class="form-control" id="formGroupExampleInput2"
+                  [(ngModel)]="userModel.descripcion" name="descripcion"
+                  >
+                </div>
+                <div class="form-group">
+                      <button type="submit" class="btn btn-primary btn-block">Crear</button>
+                </div>
+              </form>
+        </div>
+    </div>
+</div>

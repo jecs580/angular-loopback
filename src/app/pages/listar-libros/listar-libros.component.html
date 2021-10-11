@@ -1,0 +1,19 @@
+<div class="container">
+    <button type="button" class="btn btn-primary btn-lg m-3" routerLink='adduser' routerLink="/">Ver usuarios</button>
+   <div *ngIf="this.libros.length > 0; else loading">
+        <div class="row">
+            <div class="col-sm-6 col-md-12 m-3" *ngFor="let libro of libros">
+            <div class="card">
+                <div class="card-body">
+                <h5 class="card-title">{{libro.titulo}}</h5>
+                </div>
+            </div>
+            </div>
+        </div>
+   </div>
+   <ng-template #loading let-user>
+       <p class="ml-3">
+           Aún no hay libros
+       </p> 
+    </ng-template>
+</div>

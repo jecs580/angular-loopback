@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="col-md-6 m-auto p-2">
+        <button type="button" class="btn btn-primary btn-lg" routerLink='adduser' routerLink="/">Ver usuarios</button>
+    </div>
+    <div class="row">
+    <div class="col-md-6 m-auto p-3">
+        <form #formLibro="ngForm" (ngSubmit)="crearLibro()">
+            <div class="form-group">
+                <label for="formGroupExampleInput">Titulo</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" [(ngModel)]="libro.titulo" name="nombre">
+            </div>
+            <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block">Crear</button>
+            </div>
+            </form>
+    </div>
+</div>
+</div>
